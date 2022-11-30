@@ -16,7 +16,7 @@ export const HomePage = () => {
 
     const validateResponsive = () => matches ? <LayoutWeb /> : <LayoutCardUser />
 
-    //El cliente pidio que se meuestre mas tiempo el loader de carga
+
     useEffect(() => {
         setTimeout(() => {
             setRender(true)
