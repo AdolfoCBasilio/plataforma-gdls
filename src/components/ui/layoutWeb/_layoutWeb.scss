@@ -1,12 +1,15 @@
+//! Don't forget these words
+/* the new components should will be set to
+100% width and height of the parent container */
+
 .web__card_content {
-    // border: 5px solid rgb(0, 255, 13);
     width: 100%;
     height: 100%;
     display: flex;
 
     .web__card_left {
-        // border: 1px solid red;
-        width: 40%;
+        //! left side of card
+        width: 60%; //* 60% of the width of the parent
         display: flex;
         justify-content: center;
         align-items: center;
@@ -15,7 +18,6 @@
         border-right: 1px solid white;
 
         .web__card_imageContainer {
-            // border: 1px solid white;
             margin: 0px 20px;
             box-sizing: border-box;
             overflow: hidden;
@@ -37,25 +39,25 @@
     }
 
     .web__card_right {
-        width: 60%;
+        //! This is the right side of the card
+        width: 40%; //* This is the right side of the card
         display: flex;
         justify-content: center;
         align-items: center;
 
         .web__card_right_container {
-            border: 1px solid red;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            height: 100%;
         }
     }
 }
 
-//media queries
-
+//? media queries
 @media screen and (min-width: 1024px) {
     .web__card_content .web__card_left h1 {
         font-size: 28px;
-        margin: 0;
     }
 }

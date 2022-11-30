@@ -11,11 +11,10 @@ import Loader from "../../components/ui/loader/Loader";
 import './_homepage.scss';
 
 export const HomePage = () => {
-    const [matches] = useMediaQuery("screen and (min-width: 769px)");
     const [render, setRender] = useState(false);
 
+    const [matches] = useMediaQuery("screen and (min-width: 769px)");
     const validateResponsive = () => matches ? <LayoutWeb /> : <LayoutCardUser />
-
 
     useEffect(() => {
         setTimeout(() => {

@@ -1,16 +1,13 @@
 .mobile__card_content {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    // background-color: #16297c;
     background-color: #1E3654;
-    width: 60%;
-    max-width: 600px;
+    width: 90%; //* 90% of the width of the parent
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: absolute;
-    box-sizing: border-box;
     border-radius: 10px;
+    box-sizing: border-box;
 
     .mobile__card-picture {
         margin-top: -100px;
@@ -19,7 +16,6 @@
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        position: relative;
         overflow: hidden;
 
         .mobile__picture-profile {
@@ -37,13 +33,20 @@
 
     .mobile__card-text {
         text-align: center;
+        width: 90%;
 
         hr {
             border: 1px solid rgba(255, 255, 255, 0.548);
         }
 
-        h1,
+        h1 {
+            margin: 15px 0;
+        }
+
         p {
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgb(26, 44, 66);
             margin: 15px 0;
         }
 
@@ -52,7 +55,6 @@
             width: 100%;
             margin-top: 10px;
             margin-bottom: 30px;
-            padding: 15px 30px;
             text-align: center;
             text-transform: uppercase;
             transition: 0.5s;
@@ -63,7 +65,6 @@
             font-weight: 700;
             background: #13C09E;
             box-shadow: 0px 0px 14px -7px #f09819;
-            // background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
             cursor: pointer;
             user-select: none;
             -webkit-user-select: none;
@@ -82,69 +83,104 @@
     }
 }
 
-@media screen and (min-width: 769px) {
-
-    .mobile__card_content {
-        width: 52%;
+//! media queries
+@media screen and (min-width: 1440px) {
+    .mobile__card-text {
+        p {
+            font-size: 23px;
+        }
     }
-
 }
 
-@media screen and (max-width: 640px) {
-
-    .mobile__card_content {
-        width: 90%;
-        padding: 0 20px;
-    }
-
+@media screen and (max-width: 1440px) {
     .mobile__card-text {
         h1 {
             font-size: 18px;
         }
 
-        p,
+        p {
+            font-size: 25px;
+        }
+
+        button {
+            font-size: 15px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .mobile__card_content {
+        width: 90%;
+    }
+
+    .mobile__card-text {
+        h1 {
+            font-size: 11px;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: start;
+        }
+
         button {
             font-size: 12px;
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile__card-text {
+        h1 {
+            font-size: 5px;
+        }
+
+        p {
+            font-size: 28px;
+        }
+
+        button {
+            font-size: 20px;
+        }
+    }
 
 }
 
-@media screen and (max-width: 362px) {
-
-    .mobile__card_content {
-        width: 90%;
-        padding: 0 20px;
-    }
-
+@media screen and (max-width: 425px) {
     .mobile__card-text {
         h1 {
             font-size: 18px;
         }
 
-        p,
+        p {
+            font-size: 25px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .mobile__card-text {
+        p {
+            font-size: 20px;
+        }
+
         button {
-            font-size: 10px;
+            font-size: 15px;
         }
     }
 }
 
 
-@media screen and (max-width: 312px) {
-
-    .mobile__card_content {
-        width: 90%;
-        padding: 0 20px;
-    }
-
-    .mobile_card-text {
+@media screen and (max-width: 320px) {
+    .mobile__card-text {
         h1 {
             font-size: 14px;
         }
 
-        p,
-        button {
-            font-size: 9px;
+        p {
+            font-size: 15px;
         }
     }
 }
