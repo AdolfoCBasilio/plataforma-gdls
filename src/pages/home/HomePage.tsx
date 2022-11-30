@@ -16,6 +16,7 @@ export const HomePage = () => {
 
     const validateResponsive = () => matches ? <LayoutWeb /> : <LayoutCardUser />
 
+
     useEffect(() => {
         setTimeout(() => {
             setRender(true)
