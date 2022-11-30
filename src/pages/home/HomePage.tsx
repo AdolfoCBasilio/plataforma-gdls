@@ -20,7 +20,7 @@ export const HomePage = () => {
     useEffect(() => {
         setTimeout(() => {
             setRender(true)
-        }, 9000);
+        }, 3000);
     }, [])
 
     return (
